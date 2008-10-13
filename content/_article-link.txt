@@ -1,0 +1,5 @@
+---
+filter: erb
+---
+<p class="articleDate"><%= article.created_at.strftime('%B %d, %Y') %></p>
+<h3><%= link_to_page(article, :title => article.title) %></h3>

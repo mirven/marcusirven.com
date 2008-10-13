@@ -1,0 +1,29 @@
+---
+title:      Blog
+created_at: 2008-10-11 08:25:15.700135 -05:00
+filter:     erb
+dirty:      true
+id: blog
+---
+<div class="blogContent">
+    <h2 id="titleLatestFromBlog">Latest from the blog</h2>
+<%
+  firstArticle = true
+  articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true,
+      :sort_by => "created_at", :reverse => true, :blog_post => true)
+  articles.delete(@page)
+  paginate(articles, 10) do |page|
+-%>
+<% if firstArticle %>
+    <div class="articleHolder firstArticle">
+    <% firstArticle = false %>
+<% else %>
+    <div class="articleHolder">
+<% end %>
+    <p class="articleDate"><%= page.created_at.strftime('%B %d, %Y') %></p>
+    <p><%= link_to_page(page, :attrs => { :class => "comments" }, :url => { :anchor => "disqus_thread" }) %></p>
+    <h3 class="articleTitle"><%= link_to_page(page) %></h3>
+    <%= render(page) %>
+</div>
+<% end -%>
+</div>

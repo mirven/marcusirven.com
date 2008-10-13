@@ -1,0 +1,116 @@
+---
+extension: html
+filter:    erb
+---
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+	<title><%= @page.title %></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=mirven.myopenid.com" />
+    <meta name='Keywords' content='Marcus Irven'>
+    <meta name='Description' content='Marcus Irven' />
+    <meta name='abstract' content='Marcus Irven' />
+    <meta http-equiv='Content-Language' content='EN' />
+    <meta name='author' content='Marcus Irven' />
+    <meta name='distribution' content='Global' />
+    <meta name='revisit-after' content='1 days' />
+    <meta name='robots' content='FOLLOW,INDEX, NOODP' />
+
+	<style type="text/css" media="screen">
+	@import "/css/reset.css";
+	@import "/css/main.css";
+	@import "/css/active4d.css";
+	</style>
+
+	<!--[if lte ie 6]>
+		<style type="text/css" media="screen">
+			@import "/css/ie6-fixes.css";
+		</style>       
+	<![endif]-->
+
+	<!--[if lte ie 7]>
+		<style type="text/css" media="screen">
+			@import "/css/ie7-fixes.css";
+		</style>
+	<![endif]-->
+
+	<!-- js -->
+	<script type="text/javascript" src="/js/external.js"></script>	
+	
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf" />
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://mirven.myopenid.com/" />
+
+</head>
+
+<body id="<%= @page.id %>">
+	<div id="container">
+		<div id="header">
+			<h1 id="logo"><a href="/">Marcus Irven</a></h1>
+			<p id="baloonText">My name is Marcus Irven. I'm a software developer living in <span class="adr"><span class="locality">Austin</span>, <abbr class="region" title="Texas">TX</abbr></span>.</p>
+			<div id="topNavHolder">
+				<ul class="topNav">
+
+				    <% if @page.id == "home" %>
+					<li class="activeNav"><a href="/">home</a></li>
+					<% else %>
+					<li><a href="/">home</a></li>  
+					<% end %>
+					
+				    <% if @page.id == "blog" %>
+					<li class="activeNav"><a href="/blog">blog</a></li>  
+					<% else %>
+					<li><a href="/blog">blog</a></li>  
+					<% end %>
+					
+					<li><a href="/about">about</a></li>  
+					
+					<a class="buttonRss" href="/rss.xml">Get Rss</a>
+				</ul>        
+			</div> <!-- topNavHolder -->
+		</div><!-- header -->
+
+		<%= @content %>
+		
+		<div class="sidebar">
+          <h2 id="titleMyProfiles">My Social Profiles</h2>
+
+          <div class="myProfilesHolder">
+            <ul>
+              <li class="profileGithub"><a rel="external me" class="url" href="http://github.com/mirven">Code</a></li>
+              <li class="profileFlickr"><a rel="external me" class="url" href="http://www.flickr.com/photos/mirven">Photos</a></li>
+              <li class="profileDelicious"><a rel="external me" class="url" href="http://delicious.com/mirven/">Bookmarks</a></li>
+              <li class="profileTwitter"><a rel="external me" class="url" href="http://twitter.com/mirven/">Tweets</a></li>
+              <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Music</a></li>
+              <li class="profileFacebook"><a rel="external me" class="url" href="#">Facebook Profile </a></li>
+              <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn Profile</a></li>          
+            </ul>
+
+            <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Engineering and Co-Founder at Minggl.</a>
+          </div> <!-- myProfilesHolder -->
+        </div> <!-- sidebar -->
+
+		<div id="footer">
+			<p class="designedBy"><span>Designed by</span> <a rel="external" href="http://www.milanogw.net">Emil Milanov</a></p>   
+		</div><!-- footer -->
+
+	</div><!-- container -->
+	<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+    		var links = document.getElementsByTagName('a');
+    		var query = '?';
+    		for(var i = 0; i < links.length; i++) {
+    			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    			}
+    		}
+    		document.write('<script type="text/javascript" src="http://disqus.com/forums/mirven/get_num_replies.js' + query + '"></' + 'script>');
+    	})();
+    //]]>
+    </script>
+
+    
+</body>
+</html>

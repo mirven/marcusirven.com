@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+	<title>Blog</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=mirven.myopenid.com" />
+    <meta name='Keywords' content='Marcus Irven'>
+    <meta name='Description' content='Marcus Irven' />
+    <meta name='abstract' content='Marcus Irven' />
+    <meta http-equiv='Content-Language' content='EN' />
+    <meta name='author' content='Marcus Irven' />
+    <meta name='distribution' content='Global' />
+    <meta name='revisit-after' content='1 days' />
+    <meta name='robots' content='FOLLOW,INDEX, NOODP' />
+
+	<style type="text/css" media="screen">
+	@import "/css/reset.css";
+	@import "/css/main.css";
+	@import "/css/active4d.css";
+	</style>
+
+	<!--[if lte ie 6]>
+		<style type="text/css" media="screen">
+			@import "/css/ie6-fixes.css";
+		</style>       
+	<![endif]-->
+
+	<!--[if lte ie 7]>
+		<style type="text/css" media="screen">
+			@import "/css/ie7-fixes.css";
+		</style>
+	<![endif]-->
+
+	<!-- js -->
+	<script type="text/javascript" src="/js/external.js"></script>	
+	
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf" />
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://mirven.myopenid.com/" />
+
+</head>
+
+<body id="blog">
+	<div id="container">
+		<div id="header">
+			<h1 id="logo"><a href="/">Marcus Irven</a></h1>
+			<p id="baloonText">My name is Marcus Irven. I'm a software developer living in <span class="adr"><span class="locality">Austin</span>, <abbr class="region" title="Texas">TX</abbr></span>.</p>
+			<div id="topNavHolder">
+				<ul class="topNav">
+
+				    
+					<li><a href="/">home</a></li>  
+					
+					
+				    
+					<li class="activeNav"><a href="/blog">blog</a></li>  
+					
+					
+					<li><a href="/about">about</a></li>  
+					
+					<a class="buttonRss" href="/rss.xml">Get Rss</a>
+				</ul>        
+			</div> <!-- topNavHolder -->
+		</div><!-- header -->
+
+		<div class="blogContent">
+    <h2 id="titleLatestFromBlog">Latest from the blog</h2>
+
+    <div class="articleHolder firstArticle">
+    
+
+    <p class="articleDate">October 11, 2008</p>
+    <p><a href="/blog/2008/10/11/building-this-site-with-webby.html#disqus_thread" class="comments">Building This Site With Webby</a></p>
+    <h3 class="articleTitle"><a href="/blog/2008/10/11/building-this-site-with-webby.html">Building This Site With Webby</a></h3>
+    <p>So I hear these things called &#8220;blogs&#8221; are the next big thing and being the early adopter I am I figure I better have one.</p>
+<h4>Choosing a Platform</h4>
+<p>All I need is a basic site where I can put a little information about myself and write an article once in awhile.  I&#8217;m a developer so I must be able to hack on it.</p>
+<p>Introducing <a href="http://webby.rubyforge.org/">Webby</a></p>
+<div class="UltraViolet"><pre class="active4d">sudo gem install webby
+</pre></div><h4>I&#8217;m a Developer, I need to write about Source Code</h4>
+<h5>Introducing Ultraviolet:&#8220;http://ultraviolet.rubyforge.org&#8221;</h5>
+<h4>What About Comments?</h4>
+<p>The answer is <a href="http://disqus.com">Disqus</a>.  Adding comments is as easy as copy and pasting a little html from Disqus&#8217;s site.</p>
+<div class="UltraViolet"><pre class="active4d"><span class="TagContainer"><span class="TagContainer">&lt;</span><span class="TagName">div</span> <span class="TagContainer"><span class="TagAttribute">id</span><span class="TagContainer">=</span><span class="String"><span class="String">&quot;</span><span class="String">disqus_thread</span><span class="String">&quot;</span></span></span><span class="TagContainer">&gt;<span class="TagContainer">&lt;</span>/</span><span class="TagName">div</span><span class="TagContainer">&gt;</span></span>
+<span class="TagContainer"><span class="TagContainer">&lt;</span><span class="TagName">script</span> <span class="TagAttribute">type</span>=<span class="String"><span class="String">&quot;</span>text/javascript<span class="String">&quot;</span></span> <span class="TagAttribute">src</span>=<span class="String"><span class="String">&quot;</span>http://disqus.com/forums/username/embed.js<span class="String">&quot;</span></span><span class="TagContainer">&gt;<span class="TagContainer">&lt;</span>/</span><span class="TagName">script</span><span class="TagContainer">&gt;</span></span>
+<span class="TagContainer"><span class="TagContainer">&lt;</span><span class="TagName">noscript</span><span class="TagContainer">&gt;</span></span><span class="TagContainer"><span class="TagContainer">&lt;</span><span class="TagName">a</span> <span class="TagAttribute">href</span>=<span class="String"><span class="String">&quot;</span>http://username.disqus.com/?url=ref<span class="String">&quot;</span></span><span class="TagContainer">&gt;</span></span>View the discussion thread.<span class="TagContainer"><span class="TagContainer">&lt;/</span><span class="TagName">a</span><span class="TagContainer">&gt;</span></span><span class="TagContainer"><span class="TagContainer">&lt;/</span><span class="TagName">noscript</span><span class="TagContainer">&gt;</span></span>
+</pre></div><h4>Resources</h4>
+<h5>I&#8217;m not the only person using webby, the following links proved helpful when building this site</h5>
+<ul>
+	<li>Of course <a href="http://webby.rubyforge.org/">Webby&#8217;s Homepage</a> and <a href="http://webby.rubyforge.org/rdoc/">rdoc</a></li>
+	<li><a href="http://judofyr.net/">Magnus Holm</a> has a <a href="http://judofyr.net/posts/building-a-website-with-webby.html">post</a> about using webby</li>
+	<li><a href="http://beta.reinh.com/">Rein Henrichs</a> is using webby and his source is also <a href="http://github.com/ReinH/reinh-com/tree/master">available</a> at github</li>
+	<li>Mike Clark wrote a nice <a href="http://clarkware.com/cgi/blosxom/2008/08/06">article about using webby</a></li>
+	<li><a href="http://disqus.com">Disqus</a></li>
+</ul>
+</div>
+
+    <div class="articleHolder">
+
+    <p class="articleDate">October 06, 2008</p>
+    <p><a href="/blog/2008/10/06/introduction-to-lua.html#disqus_thread" class="comments">Introduction to Lua</a></p>
+    <h3 class="articleTitle"><a href="/blog/2008/10/06/introduction-to-lua.html">Introduction to Lua</a></h3>
+    <p><a href="www.lua.org">Lua</a> is a fast, lightweight, simple programming language designed to be easy to extend and to easy to be used to extend programs written in other languages.</p>
+<div class="UltraViolet"><pre class="active4d">    <span class="CommandMethod">print</span> <span class="String"><span class="String">&quot;</span>hello world<span class="String">&quot;</span></span>
+</pre></div><h4>Litora Sociis</h4>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi et risus. Aliquam nisl. Nulla facilisi. Cras accumsan vestibulum ante. Vestibulum sed tortor. Praesent tempus fringilla elit. Ut elit diam, sagittis in, nonummy in, gravida non, nunc. Ut orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam egestas, orci eu imperdiet malesuada, nisl purus fringilla odio, quis commodo est orci vitae justo. Aliquam placerat odio tincidunt nulla. Cras in libero. Aenean rutrum, magna non tristique posuere, erat odio eleifend nisl, non convallis est tortor blandit ligula. Nulla id augue.</p>
+<blockquote>
+<p>Nullam mattis, odio ut tempus facilisis, metus nisl facilisis metus, auctor consectetuer felis ligula nec mauris. Vestibulum odio erat, fermentum at, commodo vitae, ultrices et, urna. Mauris vulputate, mi pulvinar sagittis condimentum, sem nulla aliquam velit, sed imperdiet mi purus eu magna. Nulla varius metus ut eros. Aenean aliquet magna eget orci. Class aptent taciti sociosqu ad litora.</p>
+</blockquote>
+<p>Vivamus euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vel nibh ut turpis dictum sagittis. Aliquam vel velit a elit auctor sollicitudin. Nam vel dui vel neque lacinia pretium. Quisque nunc erat, venenatis id, volutpat ut, scelerisque sed, diam. Mauris ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec mattis. Morbi dignissim sollicitudin libero. Nulla lorem.</p>
+</div>
+</div>
+
+		
+		<div class="sidebar">
+          <h2 id="titleMyProfiles">My Social Profiles</h2>
+
+          <div class="myProfilesHolder">
+            <ul>
+              <li class="profileGithub"><a rel="external me" class="url" href="http://github.com/mirven">Code</a></li>
+              <li class="profileFlickr"><a rel="external me" class="url" href="http://www.flickr.com/photos/mirven">Photos</a></li>
+              <li class="profileDelicious"><a rel="external me" class="url" href="http://delicious.com/mirven/">Bookmarks</a></li>
+              <li class="profileTwitter"><a rel="external me" class="url" href="http://twitter.com/mirven/">Tweets</a></li>
+              <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Music</a></li>
+              <li class="profileFacebook"><a rel="external me" class="url" href="#">Facebook Profile </a></li>
+              <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn Profile</a></li>          
+            </ul>
+
+            <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Engineering and Co-Founder at Minggl.</a>
+          </div> <!-- myProfilesHolder -->
+        </div> <!-- sidebar -->
+
+		<div id="footer">
+			<p class="designedBy"><span>Designed by</span> <a rel="external" href="http://www.milanogw.net">Emil Milanov</a></p>   
+		</div><!-- footer -->
+
+	</div><!-- container -->
+	<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+    		var links = document.getElementsByTagName('a');
+    		var query = '?';
+    		for(var i = 0; i < links.length; i++) {
+    			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    			}
+    		}
+    		document.write('<script type="text/javascript" src="http://disqus.com/forums/mirven/get_num_replies.js' + query + '"></' + 'script>');
+    	})();
+    //]]>
+    </script>
+
+    
+</body>
+</html>

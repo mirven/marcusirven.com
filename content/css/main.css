@@ -498,7 +498,7 @@ img.right{
 }
 
 .articleHolder{
-   margin: 0 0 96px 0;
+   margin: 0 0 20px 0;
    float: left;
    border-top: 3px solid #e1e1e1;
    width: 100%;
@@ -632,4 +632,8 @@ individual article page
    width: 100%;
    padding: 0px 0 0 0;
    clear: both;
+}
+
+.UltraViolet{
+   line-height: 15px;
 }

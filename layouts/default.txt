@@ -5,7 +5,7 @@ filter:    erb
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-	<title><%= @page.title %></title>
+	<title>Marcus Irven | <%= @page.title %></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=mirven.myopenid.com" />
     <meta name='Keywords' content='Marcus Irven'>
@@ -15,7 +15,7 @@ filter:    erb
     <meta name='author' content='Marcus Irven' />
     <meta name='distribution' content='Global' />
     <meta name='revisit-after' content='1 days' />
-    <meta name='robots' content='FOLLOW,INDEX, NOODP' />
+    <meta name='robots' content='FOLLOW,INDEX, NOODP' />    
 
 	<style type="text/css" media="screen">
 	@import "/css/reset.css";
@@ -38,7 +38,8 @@ filter:    erb
 	<!-- js -->
 	<script type="text/javascript" src="/js/external.js"></script>	
 	
-    <link rel="meta" type="application/rdf+xml" title="FOAF" href="foaf.rdf" />
+    <!-- <link rel="meta" type="application/rdf+xml" title="FOAF" href="/foaf.rdf" /> -->
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://feeds2.feedburner.com/mirven" />    
     <link rel="openid.server" href="http://www.myopenid.com/server" />
     <link rel="openid.delegate" href="http://mirven.myopenid.com/" />
 
@@ -63,11 +64,15 @@ filter:    erb
 					<% else %>
 					<li><a href="/blog">blog</a></li>  
 					<% end %>
+
+				    <% if @page.id == "about" %>
+					<li class="activeNav"><a href="/about.html">about</a></li>  
+					<% else %>
+					<li><a href="/about.html">about</a></li>  
+					<% end %>
 					
-					<li><a href="/about">about</a></li>  
-					
-					<a class="buttonRss" href="/rss.xml">Get Rss</a>
 				</ul>        
+				<a class="buttonRss" href="http://feeds2.feedburner.com/mirven">Get Rss</a>
 			</div> <!-- topNavHolder -->
 		</div><!-- header -->
 

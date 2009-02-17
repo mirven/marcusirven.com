@@ -38,14 +38,14 @@ filter:    erb
 	<!-- js -->
 	<script type="text/javascript" src="/js/external.js"></script>	
 	
-    <!-- <link rel="meta" type="application/rdf+xml" title="FOAF" href="/foaf.rdf" /> -->
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="/foaf.rdf" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://feeds2.feedburner.com/mirven" />    
     <link rel="openid.server" href="http://www.myopenid.com/server" />
     <link rel="openid.delegate" href="http://mirven.myopenid.com/" />
 
 </head>
 
-<body id="<%= @page.id %>">
+<body id="<%= @page.body_id || @page.id %>">
 	<div id="container">
 		<div id="header">
 			<h1 id="logo"><a href="/">Marcus Irven</a></h1>
@@ -83,16 +83,16 @@ filter:    erb
 
           <div class="myProfilesHolder">
             <ul>
-              <li class="profileGithub"><a rel="external me" class="url" href="http://github.com/mirven">Code</a></li>
-              <li class="profileFlickr"><a rel="external me" class="url" href="http://www.flickr.com/photos/mirven">Photos</a></li>
-              <li class="profileDelicious"><a rel="external me" class="url" href="http://delicious.com/mirven/">Bookmarks</a></li>
-              <li class="profileTwitter"><a rel="external me" class="url" href="http://twitter.com/mirven/">Tweets</a></li>
-              <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Music</a></li>
-              <li class="profileFacebook"><a rel="external me" class="url" href="#">Facebook Profile </a></li>
-              <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn Profile</a></li>          
+              <li class="profileGithub"><a rel="external me" class="url" href="http://github.com/mirven">GitHub</a></li>
+              <li class="profileTwitter"><a rel="external me" class="url" href="http://twitter.com/mirven/">Twitter</a></li>
+              <li class="profileFlickr"><a rel="external me" class="url" href="http://www.flickr.com/photos/mirven">Flickr</a></li>
+              <li class="profileDelicious"><a rel="external me" class="url" href="http://delicious.com/mirven/">Delicious</a></li>
+              <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Last.fm</a></li>
+              <li class="profileFacebook"><a rel="external me" class="url" href="http://www.facebook.com/people/Marcus-Irven/500102730">Facebook</a></li>
+              <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn</a></li>          
             </ul>
 
-            <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Engineering and Co-Founder at Minggl.</a>
+            <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Development and Co-Founder at Minggl.</a>
           </div> <!-- myProfilesHolder -->
         </div> <!-- sidebar -->
 
@@ -101,6 +101,7 @@ filter:    erb
 		</div><!-- footer -->
 
 	</div><!-- container -->
+    <!-- disqus -->
 	<script type="text/javascript">
     //<![CDATA[
     (function() {
@@ -114,6 +115,17 @@ filter:    erb
     		document.write('<script type="text/javascript" src="http://disqus.com/forums/mirven/get_num_replies.js' + query + '"></' + 'script>');
     	})();
     //]]>
+    </script>
+    
+    <!-- google analytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3441252-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
     </script>
 
     

@@ -1,6 +1,6 @@
 ---
-title:     A New Atom Feed
-subtitle:  A really swell blog built with Webby
+title:     Marcus Irven's Blog
+subtitle:  Marcus Irven's Blog
 site:      www.marcusirven.com
 author:    Marcus Irven
 email:     marcus@marcusirven.com

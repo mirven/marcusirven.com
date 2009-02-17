@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    
+    <foaf:PersonalProfileDocument rdf:about="http://marcusirven.com/foaf.rdf">
+        <foaf:maker rdf:resource="#me"/>
+        <foaf:primaryTopic rdf:resource="#me"/>
+        <dc:creator rdf:resource="#me"/>        
+        <dc:title>Marcus Irven&apos;s FOAF File</dc:title>
+        <rdfs:label>Marcus Irven&apos;s FOAF File</rdfs:label>
+        <dc:description>Friend-of-a-Friend description for Marcus Irven in machine-readable RDF/XML</dc:description>
+    </foaf:PersonalProfileDocument>
+    <foaf:Person rdf:ID="me">
+        <foaf:openid rdf:resource="http://marcusirven.com/"/>
+        <foaf:name>Marcus Irven</foaf:name>
+        <foaf:givenname>Marcus</foaf:givenname>
+        <foaf:family_name>Irven</foaf:family_name>
+        <foaf:nick>mirven</foaf:nick>
+        <foaf:mbox_sha1sum>efa26e8de95218ff26127fcdf3a2e351a81f50a6</foaf:mbox_sha1sum>
+        <foaf:homepage rdf:resource="http://www.marcusirven.com"/>
+        <foaf:weblog rdf:resource="http://www.marcusirven.com/blog"/>
+        <foaf:phone rdf:resource="tel:512-897-7220"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.minggl.com"/>
+        <foaf:schoolHomepage rdf:resource="http://illinois.edu"/>
+        <foaf:aimChatID>marcusirven</foaf:aimChatID>
+        <foaf:jabberID>mirven@gmail.com</foaf:jabberID>
+        <foaf:msnChatID>marcusirven@hotmail.com</foaf:msnChatID>
+        <foaf:yahooChatID>marcus_irven</foaf:yahooChatID>
+        <foaf:based_near rdf:resource="http://sws.geonames.org/4676199/" rdfs:label="Austin, TX"/>
+    </foaf:Person>
+</rdf:RDF>

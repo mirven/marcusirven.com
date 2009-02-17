@@ -1,5 +1,5 @@
 --- 
-title:      Introducing Luaspec
+title:      Introducing luaspec
 created_at: 2009-02-15 13:22:28.918987 -06:00
 blog_post:  true
 layout:     post
@@ -8,17 +8,21 @@ filter:
   - erb
   - textile
 --- 
-I've been doing a lot of work with "Lua":http://www.lua.org/ over the past couple of years.  Originally I used "luaunit":http://phil.freehackers.org/programs/luaunit/index.html for unit testing.  This has worked ok, but I've used "RSpec":http://rspec.info/ while working with Ruby and have come to appreciate the specification syle syntax and the different mindset it invokes while writing tests.  So I introduce to you "luaspec":http://github.com/mirven/luaspec/tree/master.
+I've been doing a lot of work with "Lua":http://www.lua.org/ over the past couple of years.  Originally I used "luaunit":http://phil.freehackers.org/programs/luaunit/index.html for unit testing.  This has worked ok, but I've used "RSpec":http://rspec.info/ while working with Ruby and have come to appreciate the specification style syntax and the different mindset it invokes while writing tests.  So I introduce to you "luaspec":http://github.com/mirven/luaspec/, a "behaviour-driven design":http://behaviour-driven.org/ framework for Lua.
 
 <% uv(:lang => "lua", :line_numbers => true, :theme => "active4d") do -%>
+require 'luaspec'
+
 describe["Account, withdrawing funds"] = function()
     before = function()
         account = Account:new { balance = 100 }
         account:withdraw(10)
     end
     
-    it["should remove the withdrawl amount from the balance"] = function()
+    it["should remove the withdrawal amount from the balance"] = function()
         expect(account.balance).should_be(90)
     end
 end
 <% end -%>
+
+It supports nested contexts, before and after functions, and has built-in support for mocking.  More articles coming in the upcoming days describing all the functionality fully.

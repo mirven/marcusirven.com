@@ -13,7 +13,9 @@ h3. About Me
 
 <p class="vcard">My name is <span class="fn n">Marcus Irven</span>. I'm a software developer living in <span class="adr"><span class="locality">Austin</span>, <span class="region">Texas</span></span>.</p>
 
-I am the co-founder of "Minggl":http://www.minggl.com and "Reservation Genie":http://www.reservationgenie.com.  I'm not religious about languages and believe in using the right tool for the job.  I'm comfortable with C++, Java, Ruby, Groovy, Lua, and Javascript and have recently began experimenting with Erlang, Scala, and Clojure.
+I'm passionate about software design and development.  I'm not religious about languages (though I do have my preferences), I believe in using the right tool for the job.  I'm comfortable with C++, Java, Ruby, Groovy, Lua, and Javascript and have recently began experimenting with Erlang, Scala, and Clojure.
+
+I am the co-founder of "Minggl":http://www.minggl.com and "Reservation Genie":http://www.reservationgenie.com.  
 
 I'm the author of "luaspec":http://github.com/mirven/luaspec, a "behavior-driven design":http://behavior-driven.org framework for the "Lua":http://lua.org  programming langauge.
 

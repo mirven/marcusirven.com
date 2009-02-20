@@ -1,0 +1,83 @@
+--- 
+title:      Dangers of lua_error when using C++
+created_at: 2009-02-19 13:56:30.682240 -06:00
+blog_post:  true
+layout:     post
+id:         blog
+filter:
+  - erb
+  - textile
+--- 
+By default Lua uses "longjmp()":http://en.wikipedia.org/wiki/Longjmp when "lua_error()":http://www.lua.org/manual/5.1/manual.html#lua_error or "luaL_error()":http://www.lua.org/manual/5.1/manual.html#luaL_error is called, this can produce subtle bugs or memory leaks in C++ if you are not careful.
+
+Take the following code, which simply calls the foo function which creates an object on the stack and throws an error:
+
+<% uv(:lang => "c++", :line_numbers => true, :theme => "active4d") do -%>
+#include <iostream>
+
+extern "C" {
+    #include "lua.h"
+    #include "lualib.h"
+    #include "lauxlib.h"
+}
+
+class Obj {
+public:
+    Obj() {
+        std::cout << "object create" << std::endl;
+    }
+
+    ~Obj() {
+        std::cout << "object destroy" << std::endl;
+    }
+};
+
+int foo(lua_State*L) {
+    Obj obj;
+    return luaL_error(L, "error in foo");   
+}
+
+
+int main(int argc, char** argv) {
+    lua_State* L = lua_open();
+
+    lua_pushcfunction(L, foo);
+    int r = lua_pcall(L, 0,0,0);
+
+    if (r == LUA_ERRRUN) {
+        std::cout << lua_tostring(L, -1) << std::endl;
+    }
+
+    lua_close(L);
+    return 0;
+}
+<% end -%>
+
+When compiled against the default build of the Lua library and run you get the following output:
+
+<% uv(:lang => "build", :line_numbers => false, :theme => "active4d") do -%>
+$ g++ main.cpp -llua -o example
+$ ./example 
+object create
+error in foo
+<% end -%>
+
+Notice the destructor was never called on obj.  However if you build Lua as C++ then lua_error() will be implemented using C++ exceptions which will cause the stack to clean up as expected.
+
+On my Mac I built Lua as C++ with the following command:
+
+<% uv(:lang => "build", :line_numbers => false, :theme => "active4d") do -%>
+make macosx -e CC=g++
+<% end -%>
+
+I've built Lua on Windows as C++ as well, in Visual Studio there is a setting to compile sources as C++ rather than by file extensions which is the default.  Now when building and running you get the output you would expected:
+
+<% uv(:lang => "build", :line_numbers => false, :theme => "active4d") do -%>
+$ g++ main.cpp -llua -o example
+$ ./example
+object create
+object destroy
+error in foo
+<% end -%>
+
+One other thing to note is that the extern "C" around the Lua includes is no longer needed after building the Lua library as C++.  If you can't rebuild the Lua library for some reason or another than you just need to be aware and make sure everything is cleaned up before calling lua_error() or luaL_error().

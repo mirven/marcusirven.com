@@ -1,0 +1,40 @@
+--- 
+title:      Comparing Ruby Fibers to Lua Coroutines
+created_at: 2009-02-19 11:57:33.337456 -06:00
+blog_post:  true
+layout:     post
+id:         blog
+filter:
+  - erb
+  - textile
+--- 
+One of the more interesting features of Lua are "coroutines":http://en.wikipedia.org/wiki/Coroutine.  One of the new features in Ruby 1.9 are "fibers":http://www.infoq.com/news/2007/08/ruby-1-9-fibers which are exactly the same thing, in fact they even borrowed the resume/yield method names from Lua.  The following Ruby code:
+
+<% uv(:lang => "ruby", :line_numbers => true, :theme => "active4d") do -%>
+fib = Fiber.new do  
+    x, y = 0, 1 
+    loop do  
+        Fiber.yield y 
+        x,y = y,x+y 
+    end 
+end 
+
+20.times { puts fib.resume }
+<% end -%>
+
+is roughly equivalent to the following Lua code:
+
+<% uv(:lang => "lua", :line_numbers => true, :theme => "active4d") do -%>
+fib = coroutine.create(function()
+    local x, y = 0, 1 	
+    while true do
+        coroutine.yield(y)
+        x,y = y,x+y 		
+    end
+end)
+
+for i=1,20 do
+    local _, value = coroutine.resume(fib)
+    print(value)
+end
+<% end -%>

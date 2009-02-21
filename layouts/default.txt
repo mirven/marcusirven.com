@@ -16,6 +16,7 @@ filter:    erb
     <meta name='distribution' content='Global' />
     <meta name='revisit-after' content='1 days' />
     <meta name='robots' content='FOLLOW,INDEX, NOODP' />    
+    <meta name="verify-v1" content="PxiwbYJGgXI6dZHTGID31X/szD20wAV3q5ddQ8S4cqU=" />
 
 	<style type="text/css" media="screen">
 	@import "/css/reset.css";

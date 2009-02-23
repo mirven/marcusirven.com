@@ -305,6 +305,10 @@ sidebar
    background: url(../images/profile_github.gif) 0px 2px no-repeat;
 }
 
+.profileFriendFeed a{
+  background: url(../images/profile_friendfeed.gif) 0px 2px no-repeat;
+}
+
 /* ---------------------------------------
 minggl link
 --------------------------------------- */

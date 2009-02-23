@@ -91,6 +91,7 @@ filter:    erb
               <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Last.fm</a></li>
               <li class="profileFacebook"><a rel="external me" class="url" href="http://www.facebook.com/people/Marcus-Irven/500102730">Facebook</a></li>
               <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn</a></li>          
+              <li class="profileFriendFeed"><a rel="external me" class="url" href="http://friendfeed/mirven">FriendFeed</a></li>          
             </ul>
 
             <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Development and Co-Founder at Minggl.</a>

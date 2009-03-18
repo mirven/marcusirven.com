@@ -100,6 +100,16 @@
             <foaf:accountProfilePage rdf:resource="http://upcoming.yahoo.com/user/171586/"/>
             <foaf:accountServiceHomepage rdf:resource="http://www.upcoming.org/"/>
         </foaf:holdsAccount>
+
+        <foaf:holdsAccount rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            <rdfs:label xml:lang="en">Marcus Irven's SlideShare presentions account</rdfs:label>
+            <foaf:accountName>mirven</foaf:accountName>
+            <foaf:accountProfilePage rdf:resource="http://www.slideshare.net/mirven"/>
+            <foaf:accountServiceHomepage rdf:resource="http://www.slideshare.net/"/>
+        </foaf:holdsAccount>
+        
+        
         
     </foaf:Person>
 </rdf:RDF>

@@ -8,7 +8,7 @@ filter:    erb
 	<title>Marcus Irven | <%= @page.title %></title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=mirven.myopenid.com" />
-    <meta name='Keywords' content='Marcus Irven'>
+    <meta name='Keywords' content='Marcus Irven,Minggl,Programming,Ruby,Lua,C++,Austin,Java,Groovy'>
     <meta name='Description' content='Marcus Irven' />
     <meta name='abstract' content='Marcus Irven' />
     <meta http-equiv='Content-Language' content='EN' />
@@ -92,6 +92,7 @@ filter:    erb
               <li class="profileFacebook"><a rel="external me" class="url" href="http://www.facebook.com/people/Marcus-Irven/500102730">Facebook</a></li>
               <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn</a></li>          
               <li class="profileFriendFeed"><a rel="external me" class="url" href="http://friendfeed.com/mirven">FriendFeed</a></li>          
+              <li class="profileUpcoming"><a rel="external me" class="url" href="http://upcoming.yahoo.com/user/171586/">Upcoming</a></li>          
             </ul>
 
             <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Development and Co-Founder at Minggl.</a>

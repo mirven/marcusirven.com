@@ -309,6 +309,10 @@ sidebar
   background: url(../images/profile_friendfeed.gif) 0px 2px no-repeat;
 }
 
+.profileUpcoming a{
+  background: url(../images/profile_upcoming.gif) 0px 2px no-repeat;
+}
+
 /* ---------------------------------------
 minggl link
 --------------------------------------- */

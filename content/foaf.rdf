@@ -109,7 +109,21 @@
             <foaf:accountServiceHomepage rdf:resource="http://www.slideshare.net/"/>
         </foaf:holdsAccount>
         
-        
-        
+        <foaf:holdsAccount rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            <rdfs:label xml:lang="en">Marcus Irven's Gowalla account</rdfs:label>
+            <foaf:accountName>mirven</foaf:accountName>
+            <foaf:accountProfilePage rdf:resource="http://gowalla.com/users/mirven"/>
+            <foaf:accountServiceHomepage rdf:resource="http://gowalla.com/">
+        </foaf:holdsAccount>
+
+        <foaf:holdsAccount rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            <rdfs:label xml:lang="en">Marcus Irven's Foursquare account</rdfs:label>
+            <foaf:accountName>mirven</foaf:accountName>
+            <foaf:accountProfilePage rdf:resource="http://foursquare.com/user/mirven"/>
+            <foaf:accountServiceHomepage rdf:resource="http://foursquare.com/">
+        </foaf:holdsAccount>
+
     </foaf:Person>
 </rdf:RDF>

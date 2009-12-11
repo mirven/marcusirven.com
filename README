@@ -1,0 +1,5 @@
+Webby code base for http://marcusirven.com
+
+Notes to self:
+	Build with $ webby
+	Deply with $ webby deploy

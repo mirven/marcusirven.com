@@ -75,7 +75,7 @@
         <foaf:holdsAccount rdf:parseType="Resource">
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
             <rdfs:label xml:lang="en">Marcus Irven's Facebook social network account</rdfs:label>
-            <foaf:accountProfilePage rdf:resource="http://www.facebook.com/people/Marcus-Irven/500102730"/>
+            <foaf:accountProfilePage rdf:resource="http://www.facebook.com/marcusirven"/>
             <foaf:accountServiceHomepage rdf:resource="http://www.facebook.com/"/>
         </foaf:holdsAccount>
         

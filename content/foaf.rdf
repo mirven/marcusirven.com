@@ -78,6 +78,13 @@
             <foaf:accountProfilePage rdf:resource="http://www.facebook.com/marcusirven"/>
             <foaf:accountServiceHomepage rdf:resource="http://www.facebook.com/"/>
         </foaf:holdsAccount>
+
+        <foaf:holdsAccount rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+            <rdfs:label xml:lang="en">Marcus Irven's Google profile</rdfs:label>
+            <foaf:accountProfilePage rdf:resource="http://www.google.com/profiles/mirven"/>
+            <foaf:accountServiceHomepage rdf:resource="http://www.google.com/profiles/"/>
+        </foaf:holdsAccount>
         
         <foaf:holdsAccount rdf:parseType="Resource">
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>

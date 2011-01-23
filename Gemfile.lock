@@ -1,0 +1,47 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    RedCloth (4.2.3)
+    configuration (1.2.0)
+    diff-lcs (1.1.2)
+    directory_watcher (1.3.2)
+    hpricot (0.8.3)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    little-plugger (1.1.2)
+    logging (1.4.3)
+      little-plugger (>= 1.1.2)
+    loquacious (1.7.0)
+    oniguruma (1.1.0)
+    plist (3.1.0)
+    rake (0.8.7)
+    rspec (2.4.0)
+      rspec-core (~> 2.4.0)
+      rspec-expectations (~> 2.4.0)
+      rspec-mocks (~> 2.4.0)
+    rspec-core (2.4.0)
+    rspec-expectations (2.4.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.4.0)
+    textpow (0.10.1)
+      oniguruma (>= 1.1.0)
+      plist (>= 3.0.0)
+    ultraviolet (0.10.2)
+      textpow (>= 0.10.0)
+    webby (0.9.4)
+      directory_watcher (>= 1.1.2)
+      hpricot (>= 0.6.0)
+      launchy (>= 0.3.2)
+      logging (>= 0.9.7)
+      loquacious (>= 1.3.0)
+      rake (>= 0.8.4)
+      rspec (>= 1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  RedCloth
+  ultraviolet
+  webby

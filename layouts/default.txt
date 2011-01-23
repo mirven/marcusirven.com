@@ -95,7 +95,6 @@ filter:    erb
               <li class="profileUpcoming"><a rel="external me" class="url" href="http://upcoming.yahoo.com/user/171586/">Upcoming</a></li>          
             </ul>
 
-            <a id="linkMinggl" href="http://www.minggl.com" rel="external">Marcus is VP Development and Co-Founder at Minggl.</a>
           </div> <!-- myProfilesHolder -->
         </div> <!-- sidebar -->
 

@@ -89,6 +89,7 @@ filter:    erb
               <li class="profileFlickr"><a rel="external me" class="url" href="http://www.flickr.com/photos/mirven">Flickr</a></li>
               <li class="profileDelicious"><a rel="external me" class="url" href="http://delicious.com/mirven/">Delicious</a></li>
               <li class="profilelastFm"><a rel="external me" class="url" href="http://www.last.fm/user/mirven">Last.fm</a></li>
+              <li class="profileGowalla"><a rel="external me" class="url" href="http://gowalla.com/mirven">Gowalla</a></li>          
               <li class="profileFacebook"><a rel="external me" class="url" href="http://www.facebook.com/marcusirven">Facebook</a></li>
               <li class="profileIn"><a rel="external me" class="url" href="http://www.linkedin.com/in/marcusirven">LinkedIn</a></li>          
               <li class="profileFriendFeed"><a rel="external me" class="url" href="http://friendfeed.com/mirven">FriendFeed</a></li>          
